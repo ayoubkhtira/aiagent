@@ -1,10 +1,14 @@
-from langchain_community.llms import Ollama
 from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
+from langchain_groq import ChatGroq
 import datetime
+import os
 
-# LLM Local
-llm = Ollama(model="llama3")
+# LLM Gratuit Groq
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama3-8b-8192"
+)
 
 # Tool 1 : Date actuelle
 def get_current_date(text):
