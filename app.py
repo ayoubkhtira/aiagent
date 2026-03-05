@@ -3,7 +3,7 @@ from agent import run_agent
 
 st.set_page_config(page_title="AI Agent", layout="wide")
 
-st.title("🤖 AI Agent Local Gratuit")
+st.title("🤖 AI Agent Gratuit (Groq + Llama3)")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
